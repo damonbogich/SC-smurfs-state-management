@@ -1,0 +1,26 @@
+import {FETCH_SMURF_START, FETCH_SMURF_SUCCESS, FETCH_SMURF_FAILURE} from '../actions';
+
+const initialState = {
+    smurfs: [],
+    isFetching: false,
+    newSmurf: {},
+    error: ""
+};
+
+export const smurfReducer = (state=initialState, action) => {
+    switch(action.type) {
+        case FETCH_SMURF_START: 
+            return {
+                ...state,
+                isFetching: true,
+            };
+        case FETCH_SMURF_SUCCESS:
+            return {
+                ...state,
+                isFetching: false,
+                smurfs: action.payload
+            }
+        default: 
+        return state
+    }
+};

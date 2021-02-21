@@ -17,7 +17,7 @@ const Smurfs = (props) => {
         {(props.smurfs.length === 0 && !props.isFetching) && <h2>No smurfs yet</h2>}
         {props.isFetching && <Loader/>}
         {props.smurfs.map((item) => {
-            return <Smurf smurf={item}/>
+            return <Smurf key={item.id} smurf={item}/>
         })}
         </>
     )

@@ -6,8 +6,6 @@ import Smurf from './Smurf';
 
 
 const Smurfs = (props) => {
-    console.log(props.smurfs, 'props')
-
     useEffect(() => {
         props.fetchSmurf();
     }, [])
@@ -24,7 +22,6 @@ const Smurfs = (props) => {
 }
 
 const mapStateToProps = (state) => {
-    console.log(state, 'state from map state to props')
     return {
         smurfs: state.smurfReducer.smurfs,
         isFetching: state.smurfReducer.isFetching,

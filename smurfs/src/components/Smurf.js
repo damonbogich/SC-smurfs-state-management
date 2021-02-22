@@ -1,6 +1,5 @@
 import React from 'react';
 export default function Smurf(props) {
-    console.log(props, 'props from smurf componenet');
     return (
         <div style={{borderBottom: '1px solid black'}}>
             <h2>Name: {props.smurf.name}</h2>

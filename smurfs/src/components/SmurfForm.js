@@ -22,7 +22,6 @@ const SmurfForm = (props) => {
         e.preventDefault();
         console.log(newSmurf);
         props.addSmurf(newSmurf);
-        props.fetchSmurf()
     }
 
 
